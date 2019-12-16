@@ -69,11 +69,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter{
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http
-                    .authorizeRequests(authorizeRequests ->
-                            authorizeRequests
-                                    .anyRequest().authenticated()
-                    )
-                    .formLogin(withDefaults());
+                    .formLogin();
         }
     }
 }
